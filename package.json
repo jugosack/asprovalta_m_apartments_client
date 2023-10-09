@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jugosack/Asprovalta-M-Apartments-client/issues"
   },
-  "homepage": "https://github.com/jugosack/Asprovalta-M-Apartments-client#readme"
+  "homepage": "https://github.com/jugosack/Asprovalta-M-Apartments-client#readme",
+  "devDependencies": {
+    "hint": "^7.1.10"
+  }
 }
