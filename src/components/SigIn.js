@@ -13,7 +13,7 @@ const SignInComponent = () => {
   const handleSignIn = async () => {
     try {
       const response = await axios.post(
-        ' https://event-connect.onrender.com/api/v1/users/sign_in',
+        ' https://localhost:3000/users/sign_in',
         {
           user: {
             email,
@@ -44,7 +44,7 @@ const SignInComponent = () => {
     const thetoken = sessionStorage.getItem('token');
     try {
       const response = await axios.delete(
-        ' https://event-connect.onrender.com/api/v1/users/sign_out',
+        ' http://localhost:3000/users/sign_out',
         {
           headers: {
             Authorization: thetoken,
