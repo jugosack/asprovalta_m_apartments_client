@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/style.css';
 
 const Body = () => (
   <header className="header">
-    <span className="header-title">Book an event to connect</span>
+    <span className="header-title">It&apos;s not Perfect... It&apos;s Paradise </span>
     <div className="header-book-btn-space">
       <span className="header-book-btn">
         <Link to="/signin" className="link-sign">Sign In</Link>
