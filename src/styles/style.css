@@ -31,7 +31,7 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 176, 0);
+    /* background-color: rgb(255, 176, 0); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,6 +68,15 @@ body {
   .header-book-btn-signup:hover {
     padding: 20px;
   }
+  .section-1 {
+    width: 100%; /* Set the width to 300 pixels */
+    height: 100px; /* Set the height to 100 pixels */
+    border: 2px solid red; /* Add a red border with a thickness of 2 pixels */
+    display: flex;
+    flex-direction: column;
+    /* You can also add other styles, like background color or padding, as needed */
+  }
+  
   
   .sidebar-list {
     list-style: none;
@@ -79,7 +88,7 @@ body {
     gap: 10px;
   }
   
-  .sidebar-item {
+  /* .sidebar-item {
     margin-bottom: 5px;
     padding: 15px;
     font-size: 15px;
@@ -94,7 +103,7 @@ body {
     color: black;
     padding-left: 0;
   }
-  
+   */
   .link {
     text-decoration: none;
     color: black;
