@@ -46,7 +46,7 @@ body {
     border: 1px solid rgb(8, 39, 111);
     padding: 1px 7px 1px 15px;
     /* color: red; */
-    width: 70px;
+    width: 50px;
     /* margin-top: 50px !important; */
     cursor: pointer;
     margin-top: 30px;
@@ -60,7 +60,7 @@ body {
     border: 1px solid rgb(8, 39, 111);
     padding: 1px 7px 1px 15px;
     background-color: rgb(8, 39, 111);
-    width: 70px;
+    width: 50px;
     cursor: pointer;
     margin-top: 30px;
     cursor: pointer;
@@ -94,7 +94,68 @@ body {
     height:70px;
   }
   
+  .contacts {
+    margin-left:250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border: 1px solid red; */
+  }
   
+  .phone,
+  .email,
+  .facebook,
+  .location {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust the spacing between elements as needed */
+  }
+  
+  .phone,
+  .email{
+   font-size:15px;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-weight: bold; 
+   color:  #1877f2;
+
+  }
+  
+  .email{
+    margin-right:70px;
+  }
+
+  /* Styling for icons */
+  .phone-icon,
+  .envelope-icon
+   {
+    color: #cb3636; 
+    font-size: 15px; 
+    margin-right: 8px; 
+  }
+
+  .location-icon{
+    color: #DB4437; 
+   font-size: 24px; 
+  }
+
+  .facebook-icon{
+    color: #1877f2; 
+    font-size: 24px; 
+  }
+  
+   
+  .link-sign {
+    text-decoration: none;
+    color:rgb(8, 39, 111);
+    font-size: 13px;
+  }
+  .link-signup {
+    text-decoration: none;
+    color:white;
+    font-size: 13px;
+  }
+
+
   @media only screen and (max-width: 600px) {
     /* .sidebar {
       position: relative;
@@ -119,15 +180,7 @@ body {
       justify-content: center;
     } */
   }
-  
-  .link-sign {
-    text-decoration: none;
-    color:rgb(8, 39, 111);
-  }
-  .link-signup {
-    text-decoration: none;
-    color:white;
-  }
+ 
   
   @media (max-width: 768px) {
     .sidebar-list {
