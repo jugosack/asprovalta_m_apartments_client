@@ -33,12 +33,27 @@ body {
   }
   
   .header-title {
-    color: #fff;
-    font-size: 3rem;
+    margin-top: -450px;
+    font-size: 4.5rem;
     font-weight: bold;
     text-align: center;
-    padding-bottom: 30px;
+   
+    font-family: 'Apple Chancery', sans-serif;
+    color: transparent; /* Make the text transparent */
+    -webkit-text-stroke: 0.01px rgba(207, 197, 224, 0.699); /* White border around the text */
   }
+  .signature{
+    font-family: 'Snell Roundhand', cursive;
+    color:antiquewhite;
+    display:flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-left:800px;  
+    margin-top:-10px;
+    font-size: 1.5rem;
+    text-decoration: underline;
+  }
+  
   
   .header-book-btn {
     background-color: #fff;
@@ -109,8 +124,24 @@ body {
     display: flex;
     align-items: center;
     margin-right: 20px; /* Adjust the spacing between elements as needed */
+    
   }
   
+  .phone-link{
+    text-decoration: none;
+     font-size:13px;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-weight: bold; 
+      color:  #1877f2;
+  }
+
+  .email-link{
+    text-decoration: none;
+    font-size:15px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-weight: bold; 
+     color:  #1877f2;
+  }
   .phone,
   .email{
    font-size:15px;
@@ -136,6 +167,8 @@ body {
   .location-icon{
     color: #DB4437; 
    font-size: 24px; 
+   height:30px;
+   width:35px;
   }
 
   .facebook-icon{

@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import '../styles/style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import locationImg from '../images/locationImg.png';
 
 import logo from '../images/logo.png'; // Import your image
 
@@ -11,14 +12,15 @@ const Body = () => (
   <>
     <div className="section-1">
       <img className="logoA" src={logo} alt="logo.png" />
+
       <div className="contacts">
         <div className="phone">
           <FontAwesomeIcon icon={faPhone} className="phone-icon" />
-          +389 71 292 496
+          <a className="phone-link" href="tel:+38971292496">+389 71 292 496</a>
         </div>
         <div className="email">
           <FontAwesomeIcon icon={faEnvelope} className="envelope-icon" />
-          asprovaltam@yahoo.com
+          <a className="email-link" href="mailto:asprovaltam@yahoo.com">asprovaltam@yahoo.com</a>
         </div>
         <div className="facebook">
           <a
@@ -35,8 +37,9 @@ const Body = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faMapMarkerAlt} className="location-icon" />
+            <img className="location-icon" src={locationImg} alt="locationImg.png" />
           </a>
+
         </div>
       </div>
 
@@ -51,8 +54,8 @@ const Body = () => (
       </div>
     </div>
     <header className="header">
-      <span className="header-title">It&apos; s not Perfect... It&apos; s Paradise </span>
-
+      <span className="header-title">It is&apos;not Perfect... It is Paradise!</span>
+      <div className="signature">Asprovalta M Apartments</div>
     </header>
 
   </>
