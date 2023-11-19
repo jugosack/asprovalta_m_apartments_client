@@ -15,7 +15,10 @@ const Body = () => (
 
       <div className="contacts">
         <div className="phone">
-          <FontAwesomeIcon icon={faPhone} className="phone-icon" />
+          {/* <FontAwesomeIcon icon={faPhone} className="phone-icon" /> */}
+          <span className="phone-label" aria-hidden="true">
+            <FontAwesomeIcon icon={faPhone} className="phone-icon" />
+          </span>
           <a className="phone-link" href="tel:+38971292496">+389 71 292 496</a>
         </div>
         <div className="email">
