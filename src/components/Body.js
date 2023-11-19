@@ -22,7 +22,7 @@ const Body = () => (
           <a className="phone-link" href="tel:+38971292496">+389 71 292 496</a>
         </div>
         <div className="email">
-          <span className="email-label">
+          <span className="email-label" aria-label="Email">
             <FontAwesomeIcon icon={faEnvelope} className="envelope-icon" />
           </span>
           <a className="email-link" href="mailto:asprovaltam@yahoo.com">asprovaltam@yahoo.com</a>
@@ -33,7 +33,7 @@ const Body = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="fb-label">
+            <span className="fb-label" aria-label="Facebook">
               <FontAwesomeIcon icon={faFacebook} className="facebook-icon" />
             </span>
           </a>
