@@ -33,8 +33,8 @@ const RoomAvailabilityCheck = () => {
   };
 
   return (
-    <div>
-      <label htmlFor="startDate">
+    <div className="container">
+      <label className="startDate" htmlFor="startDate">
         Start Date:
         <input
           id="startDate"
@@ -43,7 +43,7 @@ const RoomAvailabilityCheck = () => {
           onChange={(e) => setStartDate(e.target.value)}
         />
       </label>
-      <label htmlFor="endDate">
+      <label className="endDate" htmlFor="endDate">
         End Date:
         <input
           id="endDate"
@@ -52,7 +52,7 @@ const RoomAvailabilityCheck = () => {
           onChange={(e) => setEndDate(e.target.value)}
         />
       </label>
-      <label htmlFor="capacity">
+      <label className="capacity" htmlFor="capacity">
         Capacity:
         <input
           id="capacity"

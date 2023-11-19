@@ -64,7 +64,7 @@ const Body = () => (
     <header className="header">
       <span className="header-title">It is&apos;not Perfect... It is Paradise!</span>
       <div className="signature">Asprovalta M Apartments</div>
-      <div>
+      <div className="checkavaliliability">
         <RoomAvailabilityCheck />
       </div>
     </header>
