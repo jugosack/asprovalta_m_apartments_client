@@ -33,7 +33,9 @@ const Body = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faFacebook} className="facebook-icon" />
+            <span className="fb-label" aria-hidden="true">
+              <FontAwesomeIcon icon={faFacebook} className="facebook-icon" />
+            </span>
           </a>
         </div>
         <div className="location">
