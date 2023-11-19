@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/checkavailiability.css';
 
 const RoomAvailabilityCheck = () => {
   const [startDate, setStartDate] = useState('');
