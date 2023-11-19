@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import locationImg from '../images/locationImg.png';
+import RoomAvailabilityCheck from './CheckAvailability';
 
 import logo from '../images/logo.png'; // Import your image
 
@@ -63,6 +64,9 @@ const Body = () => (
     <header className="header">
       <span className="header-title">It is&apos;not Perfect... It is Paradise!</span>
       <div className="signature">Asprovalta M Apartments</div>
+      <div>
+        <RoomAvailabilityCheck />
+      </div>
     </header>
 
   </>
