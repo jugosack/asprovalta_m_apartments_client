@@ -27,6 +27,7 @@ const RoomAvailabilityCheck = () => {
       const data = await response.json();
       setAvailableRooms(data.available_dates_per_room);
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error('Error checking availability:', error);
     }
   };
