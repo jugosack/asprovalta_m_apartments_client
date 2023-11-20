@@ -59,6 +59,10 @@ const RoomAvailabilityCheck = () => {
           type="number"
           value={capacity}
           onChange={(e) => setCapacity(e.target.value)}
+          // eslint-disable-next-line max-len
+          // onChange={(e) => setCapacity(Math.min(Math.max(parseInt(e.target.value, 10) || 1, 1), 7))}
+          // min={1}
+          // max={7}
         />
       </label>
       <button type="button" onClick={checkAvailability}>

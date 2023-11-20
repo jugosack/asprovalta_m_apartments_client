@@ -20,10 +20,15 @@
     display: block;
     margin-bottom: 10px;
   }
+  /* .capacity {
+    display: block;
+    margin-bottom: 10px;
+  } */
+
   .capacity {
     display: flex;
     flex-direction: column;
-  }
+  } 
 
   #capacity{
      width: 50%;
@@ -71,8 +76,8 @@
     border-color: white;
     border-radius: 10px;
     color: white;
-  }
-   */
+  } */
+  
 
   /* Style the button */
   button {
@@ -100,11 +105,7 @@
     margin-bottom: 5px;
   }
 
-  /* ::-webkit-calendar-picker-indicator {
-    filter: invert(50%) sepia(85%) saturate(7299%) hue-rotate(356deg)
-      brightness(107%) contrast(117%);
-     
-  } */
+
   ::-webkit-calendar-picker-indicator {
     color: white;
     filter: invert(100%);
