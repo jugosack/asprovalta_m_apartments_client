@@ -30,17 +30,20 @@
     flex-direction: column;
   } 
 
-  #capacity{
-     width: 50%;
-    padding: 8px;
+  #capacity {
+    width: 30%;
+    height: 35px;
+    padding-left: 15px;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: -10px;
     box-sizing: border-box;
     background-color: transparent;
     border-color: white;
     border-radius: 7px;
     color: white;
-  } 
+    border: none;
+    font-size: 20px;
+}
 
   #startDate{
     width: 100%;
@@ -110,7 +113,58 @@
     color: white;
     filter: invert(100%);
   }
-  input[type=number]::-webkit-inner-spin-button {
+  /* input[type=number]::-webkit-inner-spin-button {
     opacity: 1
 }
-  
+   */
+
+   /* input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  } */
+
+  .plus {
+    width: 15%;
+    margin-top: 5px;
+    margin-bottom: -10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 25px;
+    padding-right: 15px !important;
+}
+
+
+.minus {
+  width: 15%;
+  margin-top: 5px;
+  margin-bottom: -10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 25px;
+  padding-left: 0px;
+}
+
+.separator {
+  width: 15%;
+  margin-top: 5px;
+  margin-bottom: -10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 25px;
+}
+.capacity-input {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  width: 150px;
+  height: 40px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2px;
+}
