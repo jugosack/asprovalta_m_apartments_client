@@ -2,13 +2,14 @@
 
 /* Style the container */
 .container {
-    column-gap: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: row;
+  margin-bottom: -300px;
+  padding-top: 90px;
+  column-gap: 20px;
+  display: flex;
+  flex-direction: row;
+  color: white;
 }
+
   
   /* Style labels */
   .startDate {
@@ -31,16 +32,22 @@
     margin-top: 5px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 10px;
+    color: white;
   }
   
   /* Style the button */
   button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
+    margin-top: 25px;
     cursor: pointer;
+    width: 120px;
+    height: 35px;
+    border: 1px solid red;
+    border-radius: 10px;
+    background-color: white;
+    color: red;
   }
   
   /* Style the available rooms section */
