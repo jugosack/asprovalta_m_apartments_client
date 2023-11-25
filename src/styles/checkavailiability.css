@@ -2,8 +2,8 @@
 
 /* Style the container */
 .container {
-  margin-bottom: -300px;
-  padding-top: 90px;
+  /* margin-bottom: -300px;
+  padding-top: 90px; */
   column-gap: 20px;
   display: flex;
   flex-direction: row;
