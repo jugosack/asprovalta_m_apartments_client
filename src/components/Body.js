@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/style.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import locationImg from '../images/locationImg.png';
-import RoomAvailabilityCheck from './CheckAvailability';
-import Weather from './Weather';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/style.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import locationImg from "../images/locationImg.png";
+import RoomAvailabilityCheck from "./CheckAvailability";
+import Weather from "./Weather";
 
-import logo from '../images/logo.png'; // Import your image
+import logo from "../images/logo.png"; // Import your image
 
 const Body = () => (
   <>
@@ -21,13 +21,17 @@ const Body = () => (
           <span className="phone-label" aria-hidden="true">
             <FontAwesomeIcon icon={faPhone} className="phone-icon" />
           </span>
-          <a className="phone-link" href="tel:+38971292496">+389 71 292 496</a>
+          <a className="phone-link" href="tel:+38971292496">
+            +389 71 292 496
+          </a>
         </div>
         <div className="email">
           <span className="email-label" aria-label="Email">
             <FontAwesomeIcon icon={faEnvelope} className="envelope-icon" />
           </span>
-          <a className="email-link" href="mailto:asprovaltam@yahoo.com">asprovaltam@yahoo.com</a>
+          <a className="email-link" href="mailto:asprovaltam@yahoo.com">
+            asprovaltam@yahoo.com
+          </a>
         </div>
         <div className="facebook">
           <a
@@ -46,24 +50,33 @@ const Body = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className="location-icon" src={locationImg} alt="locationImg.png" />
+            <img
+              className="location-icon"
+              src={locationImg}
+              alt="locationImg.png"
+            />
           </a>
-
         </div>
       </div>
 
       <div className="header-book-btn-space">
         <div className="header-book-btn">
-          <Link to="/signin" className="link-sign">Sign In</Link>
+          <Link to="/signin" className="link-sign">
+            Sign In
+          </Link>
         </div>
         <span className="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <div className="header-book-btn-signup">
-          <Link to="/signup" className="link-signup">Sign Up</Link>
+          <Link to="/signup" className="link-signup">
+            Sign Up
+          </Link>
         </div>
       </div>
     </div>
     <header className="header">
-      <span className="header-title">It is not Perfect... It is Paradise!</span>
+      <span className="header-title">
+        It is&apos;not Perfect... It is Paradise!
+      </span>
       <div className="signature">Asprovalta M Apartments</div>
       <div className="checkavaliliability">
         <RoomAvailabilityCheck />
@@ -72,7 +85,6 @@ const Body = () => (
         <Weather />
       </div>
     </header>
-
   </>
 );
 
