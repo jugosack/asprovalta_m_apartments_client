@@ -41,18 +41,18 @@ body {
   font-weight: bold;
   text-align: center;
   font-family: 'Apple Chancery', sans-serif;
-  color: transparent; 
-  -webkit-text-stroke: 0.01px rgba(207, 197, 224, 0.699); 
+  color: transparent;
+  -webkit-text-stroke: 0.01px rgba(207, 197, 224, 0.699);
 } */
 
 .header-title {
-/* margin-top: 550px; */
-font-size: 4.5rem;
-font-weight: bold;
-text-align: center;
-font-family: 'Apple Chancery', sans-serif;
-color: transparent;
--webkit-text-stroke: 0.01px rgba(207, 197, 224, 0.699);
+  /* margin-top: 550px; */
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Apple Chancery', sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 0.01px rgba(207, 197, 224, 0.699);
 }
 
 .signature {
@@ -62,18 +62,18 @@ color: transparent;
   flex-direction: row;
   justify-content: right;
   margin-left: 800px;
+
   /* margin-top: -10px; */
   font-size: 1.5rem;
   text-decoration: underline;
 }
 
-.checkavaliliability{
- 
-  margin-top:10px;
+.checkavaliliability {
+  margin-top: 10px;
 }
-.weather{
- 
-  margin-right:500px;
+
+.weather {
+  margin-right: 500px;
 }
 
 .header-book-btn {
@@ -206,8 +206,6 @@ color: transparent;
   color: #1877f2;
   font-size: 24px;
 }
-
-
 
 @media only screen and (max-width: 600px) {
   /* .sidebar {
