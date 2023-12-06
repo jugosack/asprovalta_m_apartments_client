@@ -186,7 +186,7 @@ import '../styles/weather.css';
 const Weather = () => {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecastData, setForecastData] = useState(null);
-  const apiKey = '1187b904bbdd08dc455f4cf12199c7b6';
+  const apiKey = '742d4df3226aeaac7dd26575e526e3cd';
   const city = 'Asprovalta';
   const currentWeatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   const forecastApiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
