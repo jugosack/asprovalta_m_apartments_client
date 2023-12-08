@@ -1,14 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "../styles/style.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import locationImg from "../images/locationImg.png";
-import RoomAvailabilityCheck from "./CheckAvailability";
-import Weather from "./Weather";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/style.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import locationImg from '../images/locationImg.png';
+import RoomAvailabilityCheck from './CheckAvailability';
+import Weather from './Weather';
 
-import logo from "../images/logo.png"; // Import your image
+import logo from '../images/logo.png'; // Import your image
 
 const Body = () => (
   <>

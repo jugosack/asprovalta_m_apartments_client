@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
-import PropTypes from "prop-types";
+import React, { useState, useEffect } from 'react';
+import {
+  Routes, Route, Navigate, useLocation,
+} from 'react-router-dom';
+import PropTypes from 'prop-types';
 // import EventDetails from './pages/events/EventDetails';
 // import Layout from './components/Layout';
-import Body from "./components/Body";
-import SignIn from "./components/SigIn";
-import SignUp from "./components/SignUp";
-import Payment from "./components/Payment";
+import Body from './components/Body';
+import SignIn from './components/SigIn';
+import SignUp from './components/SignUp';
+
 // import Events from './pages/events';
 // import Reservations from './pages/reservation';
 // import EventForm from './pages/events/CreateEvent';
@@ -18,7 +20,7 @@ const ProtectedRoute = ({ path, element: Component }) => {
 
   useEffect(() => {
     // Check authentication state (e.g., from session storage or global state)
-    const token = sessionStorage.getItem("userId");
+    const token = sessionStorage.getItem('userId');
     setIsAuthenticated(!!token); // Set isAuthenticated to true if token exists
   }, []);
 
@@ -40,7 +42,7 @@ const App = () => (
     <Route path="/" element={<Body />} />
     <Route path="/signin" element={<SignIn />} />
     <Route path="/signup" element={<SignUp />} />
-    <Route path="/payment" element={<Payment />} />
+
     {/* <Route
       path="/"
       element={(
