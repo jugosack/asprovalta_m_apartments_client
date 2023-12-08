@@ -212,7 +212,7 @@ const Weather = () => {
       }
     };
 
-    fetchCurrentWeather();
+   
     fetchForecastData();
   }, [currentWeatherApiUrl, forecastApiUrl]);
 
