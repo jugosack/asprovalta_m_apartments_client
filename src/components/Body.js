@@ -7,6 +7,7 @@ import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import locationImg from '../images/locationImg.png';
 import RoomAvailabilityCheck from './CheckAvailability';
 import Weather from './Weather';
+import Review from './Review';
 
 import logo from '../images/logo.png'; // Import your image
 
@@ -83,6 +84,7 @@ const Body = () => (
       </div>
       <div className="weather">
         <Weather />
+        <Review />
       </div>
     </header>
   </>
