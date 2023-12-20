@@ -82,9 +82,13 @@ const Body = () => (
       <div className="checkavaliliability">
         <RoomAvailabilityCheck />
       </div>
-      <div className="weather">
-        <Weather />
-        <Review />
+      <div className="wea-rev">
+        <div className="weather">
+          <Weather />
+        </div>
+        <div className="review">
+          <Review />
+        </div>
       </div>
     </header>
   </>
