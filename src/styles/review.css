@@ -48,3 +48,38 @@ width: 50px;
 .name-time > p {
     margin: 5px 0; /* Set margin to create a small gap (adjust as needed) */
 }
+
+.rev-but{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Add this line */
+}
+.write-review-btn {
+  /* margin-top: 5px;
+  padding: 8px 15px; 
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  text-decoration: none; 
+  border-radius: 10px; 
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;  */
+ 
+    
+  margin-top: 8px;
+  margin-right: 5px;
+  padding: 5px 5px;
+  width: 100px;
+  color: rgb(8, 39, 111);
+  background-color: white;
+  font-size: 14px;
+  border: 2px solid  rgb(8, 39, 111);
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.write-review-btn:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}

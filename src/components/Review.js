@@ -114,7 +114,17 @@ const Review = () => {
 
   return (
     <div className="review-container">
-      <h1 className="title-rev">Reviews:</h1>
+      <div className="rev-but">
+        <h1 className="title-rev">Reviews:</h1>
+        <a
+          href="https://search.google.com/local/writereview?placeid=ChIJPTqLQyIfqRQRyFG3wnFg5c4"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="write-review-btn"
+        >
+          Leave a Review
+        </a>
+      </div>
       {reviews.length > 0 && (
         <div className="text-container">
           <div className="img-name">
