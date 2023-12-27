@@ -34,12 +34,20 @@ const RoomAvailabilityCheck = () => {
 
   const handleIncrement = () => {
     // eslint-disable-next-line no-nested-ternary
-    setCapacity((prevCapacity) => (prevCapacity === '' ? 1 : (prevCapacity + 1 <= 7 ? prevCapacity + 1 : prevCapacity)));
+    setCapacity((prevCapacity) => (prevCapacity === ''
+      ? 1
+      : prevCapacity + 1 <= 7
+        ? prevCapacity + 1
+        : prevCapacity));
   };
 
   const handleDecrement = () => {
     // eslint-disable-next-line no-nested-ternary
-    setCapacity((prevCapacity) => (prevCapacity === '' ? '' : (prevCapacity - 1 >= 1 ? prevCapacity - 1 : prevCapacity)));
+    setCapacity((prevCapacity) => (prevCapacity === ''
+      ? ''
+      : prevCapacity - 1 >= 1
+        ? prevCapacity - 1
+        : prevCapacity));
   };
 
   return (
@@ -72,10 +80,13 @@ const RoomAvailabilityCheck = () => {
             onChange={(e) => setCapacity(e.target.value)}
           />
           <div className="button-container">
-            <button className="plus" type="button" onClick={handleIncrement}>+</button>
+            <button className="plus" type="button" onClick={handleIncrement}>
+              +
+            </button>
             <span className="separator">/</span>
-            <button className="minus" type="button" onClick={handleDecrement}>-</button>
-
+            <button className="minus" type="button" onClick={handleDecrement}>
+              -
+            </button>
           </div>
         </div>
       </label>
@@ -83,7 +94,7 @@ const RoomAvailabilityCheck = () => {
         Check Availability
       </button>
 
-      {availableRooms && (
+      {/* {availableRooms && (
         <div>
           <h3>Available Rooms:</h3>
           <ul>
@@ -94,6 +105,38 @@ const RoomAvailabilityCheck = () => {
                   :
                 </strong>
                 {availableDates.join(', ')}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )} */}
+      {availableRooms && (
+        <div>
+          <h3>Available Rooms:</h3>
+          <ul>
+            {Object.entries(availableRooms).map(([roomId, roomDetails]) => (
+              <li key={roomId}>
+                <strong>
+                  {roomDetails.name}
+                  :
+                </strong>
+                {Array.isArray(roomDetails.available_dates)
+                && roomDetails.available_dates.length > 0 ? (
+                  <ul>
+                    {roomDetails.available_dates.map(({ date, price }) => (
+                      <li key={date}>
+                        Date:
+                        {' '}
+                        {date}
+                        , Price:
+                        {' '}
+                        {price}
+                      </li>
+                    ))}
+                  </ul>
+                  ) : (
+                    'No available dates'
+                  )}
               </li>
             ))}
           </ul>

@@ -73,7 +73,19 @@ body {
 }
 
 .weather {
-  margin-right: 500px;
+  margin-left: 250px;
+}
+
+.review {
+  margin-right: 250px;
+  width: 350px;
+}
+
+.wea-rev {
+  display: flex;
+  flex-direction: row;
+  column-gap: 250px;
+  margin-top: 70px;
 }
 
 .header-book-btn {
