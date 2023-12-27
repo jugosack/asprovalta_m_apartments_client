@@ -1,70 +1,70 @@
-.review-container{
-display: flex;
+.review-container {
+  display: flex;
   flex-direction: column;
   border-radius: 10px;
   background-color: #18758830;
 }
 
-.title-rev{
-    font-size: 15px;
-    color: white;
-}
-.img{
-width: 50px;
- height: 50px;
+.title-rev {
+  font-size: 15px;
+  color: white;
 }
 
-.text-container{
-    color: white;
+.img {
+  width: 50px;
+  height: 50px;
 }
 
-.img-name{
-    display:flex;
-    flex-direction: row;
-    column-gap: 15px;
-    margin-top: 10px;
-    margin-left: 15px;
+.text-container {
+  color: white;
+}
+
+.img-name {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+  margin-top: 10px;
+  margin-left: 15px;
 }
 
 /* Add styles for hearts */
 .heart-container {
-    font-size: 20px; /* Adjust font size as needed */
-  }
-  
-  .heart-filled {
-    color: red; /* You can change the color to your preference */
-  }
-  
-  .heart-empty {
-    color: lightgray;
-  }
-  
+  font-size: 20px; /* Adjust font size as needed */
+}
+
+.heart-filled {
+  color: red; /* You can change the color to your preference */
+}
+
+.heart-empty {
+  color: lightgray;
+}
 
 .name-time {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .name-time > p {
-    margin: 5px 0; /* Set margin to create a small gap (adjust as needed) */
+  margin: 5px 0; /* Set margin to create a small gap (adjust as needed) */
 }
 
-.rev-but{
+.rev-but {
   display: flex;
   flex-direction: row;
   justify-content: space-between; /* Add this line */
 }
+
 .write-review-btn {
   /* margin-top: 5px;
-  padding: 8px 15px; 
+  padding: 8px 15px;
   color: white;
   background-color: transparent;
   border: 2px solid white;
-  text-decoration: none; 
-  border-radius: 10px; 
+  text-decoration: none;
+  border-radius: 10px;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;  */
- 
-    
+
   margin-top: 8px;
   margin-right: 5px;
   padding: 5px 5px;
