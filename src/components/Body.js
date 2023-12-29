@@ -8,10 +8,15 @@ import locationImg from '../images/locationImg.png';
 import RoomAvailabilityCheck from './CheckAvailability';
 import Weather from './Weather';
 import Review from './Review';
+import Footer from './Footer';
+import '../styles/fontStyles.css';
+import '../styles/popup.css';
+import '../styles/PinyonScript-Regular.ttf';
 
 import logo from '../images/logo.png'; // Import your image
 
 const Body = () => (
+
   <>
     <div className="section-1">
       <img className="logoA" src={logo} alt="logo.png" />
@@ -75,10 +80,13 @@ const Body = () => (
       </div>
     </div>
     <header className="header">
-      <span className="header-title">
-        It is&apos;not Perfect... It is Paradise!
-      </span>
-      <div className="signature">Asprovalta M Apartments</div>
+      <span className="header-title">It is not Perfect... It is Paradise!</span>
+      <div
+        className="signature"
+      >
+        Asprovalta M Apartments
+      </div>
+
       <div className="checkavaliliability">
         <RoomAvailabilityCheck />
       </div>
@@ -91,6 +99,7 @@ const Body = () => (
         </div>
       </div>
     </header>
+    <Footer />
   </>
 );
 

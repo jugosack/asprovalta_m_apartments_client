@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
 import '../styles/checkavailiability.css';
+import MediaCard from './MediaCard';
 
 const RoomAvailabilityCheck = () => {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
-  const [capacity, setCapacity] = useState(''); // Initial capacity is an empty string
+  const [capacity, setCapacity] = useState('');
   const [availableRooms, setAvailableRooms] = useState(null);
+  const [error, setError] = useState(null);
 
   const checkAvailability = async () => {
     const apiUrl = 'http://localhost:3000/rooms/check_availability';
 
     try {
+      // Input validation: Check if startDate is before endDate
+      if (startDate > endDate) {
+        setError('End date must be after or equal to start date');
+        return;
+      }
+
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
@@ -19,129 +27,104 @@ const RoomAvailabilityCheck = () => {
         body: JSON.stringify({
           start_date: startDate,
           end_date: endDate,
-          // eslint-disable-next-line max-len
-          capacity: parseInt(capacity, 10) || undefined, // Parse capacity, default to undefined if empty
+          capacity: parseInt(capacity, 10) || undefined,
         }),
       });
 
+      if (!response.ok) {
+        throw new Error('Failed to fetch data');
+      }
+
       const data = await response.json();
       setAvailableRooms(data.available_dates_per_room);
+      setError(null); // Clear any previous errors on success
     } catch (error) {
-      // eslint-disable-next-line no-console
       console.error('Error checking availability:', error);
+      setError('Error checking availability. Please try again.'); // Provide user-friendly error message
     }
   };
 
   const handleIncrement = () => {
-    // eslint-disable-next-line no-nested-ternary
-    setCapacity((prevCapacity) => (prevCapacity === ''
-      ? 1
-      : prevCapacity + 1 <= 7
-        ? prevCapacity + 1
-        : prevCapacity));
+    setCapacity((prevCapacity) => {
+      if (prevCapacity === '') {
+        return 1;
+      } if (prevCapacity + 1 <= 7) {
+        return prevCapacity + 1;
+      }
+      return prevCapacity;
+    });
   };
 
   const handleDecrement = () => {
-    // eslint-disable-next-line no-nested-ternary
-    setCapacity((prevCapacity) => (prevCapacity === ''
-      ? ''
-      : prevCapacity - 1 >= 1
-        ? prevCapacity - 1
-        : prevCapacity));
+    setCapacity((prevCapacity) => {
+      if (prevCapacity === '') {
+        return 1;
+      } if (prevCapacity + 1 <= 7) {
+        return prevCapacity + 1;
+      }
+      return prevCapacity;
+    });
   };
 
   return (
     <div className="container">
-      <label className="startDate" htmlFor="startDate">
-        Start Date:
-        <input
-          id="startDate"
-          type="date"
-          value={startDate}
-          onChange={(e) => setStartDate(e.target.value)}
-        />
-      </label>
-      <label className="endDate" htmlFor="endDate">
-        End Date:
-        <input
-          id="endDate"
-          type="date"
-          value={endDate}
-          onChange={(e) => setEndDate(e.target.value)}
-        />
-      </label>
-      <label className="capacity" htmlFor="capacity">
-        Capacity:
-        <div className="capacity-input">
+      <div className="dates">
+        <label className="startDate" htmlFor="startDate">
+          Start Date:
           <input
-            id="capacity"
-            type="number"
-            value={capacity}
-            onChange={(e) => setCapacity(e.target.value)}
+            id="startDate"
+            type="date"
+            value={startDate}
+            onChange={(e) => setStartDate(e.target.value)}
           />
-          <div className="button-container">
-            <button className="plus" type="button" onClick={handleIncrement}>
-              +
-            </button>
-            <span className="separator">/</span>
-            <button className="minus" type="button" onClick={handleDecrement}>
-              -
-            </button>
+        </label>
+        <label className="endDate" htmlFor="endDate">
+          End Date:
+          <input
+            id="endDate"
+            type="date"
+            value={endDate}
+            onChange={(e) => setEndDate(e.target.value)}
+          />
+        </label>
+        <label className="capacity" htmlFor="capacity">
+          Capacity:
+          <div className="capacity-input">
+            <input
+              id="capacity"
+              type="number"
+              value={capacity}
+              onChange={(e) => setCapacity(e.target.value)}
+            />
+            <div className="button-container">
+              <button className="plus" type="button" onClick={handleIncrement}>+</button>
+              <span className="separator">/</span>
+              <button className="minus" type="button" onClick={handleDecrement}>-</button>
+            </div>
           </div>
-        </div>
-      </label>
-      <button type="button" onClick={checkAvailability}>
-        Check Availability
-      </button>
+        </label>
+        <button type="button" onClick={checkAvailability}>
+          Check Availability
+        </button>
+      </div>
+      <div className="row">
+        {error && <div className="error-message">{error}</div>}
 
-      {/* {availableRooms && (
-        <div>
-          <h3>Available Rooms:</h3>
-          <ul>
-            {Object.entries(availableRooms).map(([roomName, availableDates]) => (
-              <li key={roomName}>
-                <strong>
-                  {roomName}
-                  :
-                </strong>
-                {availableDates.join(', ')}
-              </li>
+        {availableRooms && (
+          <div className="available-rooms-container">
+            {Object.entries(availableRooms).map(([roomName, roomData]) => (
+              <div key={roomName} className="col-md-6">
+                <MediaCard
+                  roomName={roomName}
+                  description={`Available dates:\n${Array.isArray(roomData.available_dates) ? roomData.available_dates.map(({ date, price }) => `Date: ${date}, Price: ${price}`).join('\n') : 'N/A'}`}
+                  imageUrl="https://media.istockphoto.com/id/1398814566/photo/interior-of-small-apartment-living-room-for-home-office.jpg?s=612x612&w=0&k=20&c=8clwg8hTpvoEwL7253aKdYAUuAp1-usFOacNR5qX-Rg="
+                />
+              </div>
             ))}
-          </ul>
-        </div>
-      )} */}
-      {availableRooms && (
-        <div>
-          <h3>Available Rooms:</h3>
-          <ul>
-            {Object.entries(availableRooms).map(([roomId, roomDetails]) => (
-              <li key={roomId}>
-                <strong>
-                  {roomDetails.name}
-                  :
-                </strong>
-                {Array.isArray(roomDetails.available_dates)
-                && roomDetails.available_dates.length > 0 ? (
-                  <ul>
-                    {roomDetails.available_dates.map(({ date, price }) => (
-                      <li key={date}>
-                        Date:
-                        {' '}
-                        {date}
-                        , Price:
-                        {' '}
-                        {price}
-                      </li>
-                    ))}
-                  </ul>
-                  ) : (
-                    'No available dates'
-                  )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+
+          </div>
+        )}
+      </div>
     </div>
   );
 };
